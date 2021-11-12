@@ -64,7 +64,7 @@ class board():
 				if inlist[size*size*i+j] != "-":
 					self.cells[i][j] = int(inlist[size*size*i+j])
 
-	def print_cells(self):
+	def print(self):
 		print("+-------------------+")
 		for l in self.cells:
 			print("| ", end='')
@@ -92,8 +92,8 @@ def dfs(bd, nodecount):
 
 bd = board()
 bd.stdin()
-bd.print_cells()
+bd.print()
 nodecount = [0]
 dfs(bd, nodecount)
-bd.print_cells()
+bd.print()
 print("node count: "+str(nodecount[0]))
