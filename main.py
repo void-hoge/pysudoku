@@ -58,7 +58,7 @@ class board():
 	def stdin(self):
 		tmp = input()
 		inlist = tmp.split()
-		print(inlist)
+		# print(inlist)
 		for i in range(len(self.cells)):
 			for j in range(len(self.cells[i])):
 				if inlist[size*size*i+j] != "-":
