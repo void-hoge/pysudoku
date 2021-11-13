@@ -1,6 +1,5 @@
 #!/usr/local/bin/python3
 size = 3
-edge_size = size*size
 
 class board():
 	"""sudoku board class"""
@@ -92,7 +91,7 @@ def dfs(bd, nodecount):
 	return False
 
 bd = board()
-# bd.stdin()
+bd.stdin()
 bd.print()
 nodecount = [0]
 dfs(bd, nodecount)
