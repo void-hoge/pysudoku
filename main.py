@@ -1,9 +1,10 @@
 #!/usr/local/bin/python3
 size = 3
+edge_size = size*size
 
 class board():
 	"""sudoku board class"""
-	cells = [[-1 for i in range(0,9)] for _ in range(0, 9)]
+	cells = [[-1 for i in range(0, size*size)] for _ in range(0, size*size)]
 	log = []
 
 	def __init__(self):
@@ -45,7 +46,7 @@ class board():
 		for i in range(size):
 			for j in range(size):
 				st.add(self.cells[blockx*size+i][blocky*size+j])
-		return set([i for i in range(-1,9)]).difference(st)
+		return set([i for i in range(-1,size*size)]).difference(st)
 
 	def get_blank(self):
 		# get first blank
@@ -91,7 +92,7 @@ def dfs(bd, nodecount):
 	return False
 
 bd = board()
-bd.stdin()
+# bd.stdin()
 bd.print()
 nodecount = [0]
 dfs(bd, nodecount)
