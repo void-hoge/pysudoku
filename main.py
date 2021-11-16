@@ -90,10 +90,14 @@ def dfs(bd, nodecount):
 		bd.undo()
 	return False
 
-bd = board()
-bd.stdin()
-bd.print()
-nodecount = [0]
-dfs(bd, nodecount)
-bd.print()
-print("node count: "+str(nodecount[0]))
+def main():
+	bd = board()
+	bd.stdin()
+	bd.print()
+	nodecount = [0]
+	dfs(bd, nodecount)
+	bd.print()
+	print("node count: "+str(nodecount[0]))
+
+if __name__ == '__main__':
+	main()
